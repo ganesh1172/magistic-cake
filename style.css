@@ -1,5 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 0.1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 0, 198, 0.1) 100%
+  );
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-bottom: 1px solid;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  max-width: 120px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  background-color: #fc6603;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  outline: 2px solid #fc6603;
+  background-color: #ffffff;
+  color: #fc6603;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--white {
+  background-color: #ffffff;
+  color: #fc6603;
+  outline: 2px solid#fc6603;
+}
+
+.btn--white:hover {
+  background-color: #fc6603;
+  color: #ffffff;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+footer {
+  width: 80%;
+  margin: auto;
 }

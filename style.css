@@ -1,10 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-bottom: 2px solid #bdc3c7;
 }
 
 body {
@@ -15,16 +24,6 @@ body {
     rgba(255, 255, 255, 1) 50%,
     rgba(255, 0, 198, 0.1) 100%
   );
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  padding: 1rem 0;
-  margin: 0 auto;
-  border-bottom: 1px solid;
 }
 
 header img {
@@ -40,11 +39,17 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 nav ul li a {
   color: #000000;
   text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #fc6603;
 }
 
 .btn {
@@ -68,6 +73,7 @@ nav ul li a {
   background-color: #ffffff;
   color: #fc6603;
   outline: 2px solid#fc6603;
+  margin-left: 1rem;
 }
 
 .btn--white:hover {
@@ -78,6 +84,46 @@ nav ul li a {
 main {
   width: 80%;
   margin: auto;
+}
+
+.home__cont {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home__info {
+  width: 40%;
+}
+
+.play__video {
+  color: #fc6603;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.home__info h1 {
+  font-size: 3.3vmax;
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #707b7c;
+}
+
+.btngroup {
+  margin: 1.5rem 0;
+}
+
+.home__cont img {
+  width: 100%;
+  max-width: 600px;
 }
 
 footer {

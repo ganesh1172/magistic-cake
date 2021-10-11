@@ -18,11 +18,16 @@
     <header>
       <img src="./assets/logo.png" alt="Magistic Cake 'n' Art Logo" />
       <nav>
+        <input type="checkbox" id="check" />
+        <label for="check">
+          <i class="fas fa-bars" id="open"></i>
+          <i class="fas fa-times" id="close"></i>
+        </label>
         <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><button class="btn">Place order</button></li>
         </ul>
       </nav>
@@ -102,29 +107,8 @@
           </div>
         </div>
       </section>
-      <!-- <section id="contact">
-        <div class="container">
-          <div class="feed__review">
-            <h2>Your feedback is precisious</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-              libero deleniti sint provident est id, obcaecati vitae consequatur
-              laudantium reiciendis.
-            </p>
-          </div>
-          <form>
-            <input type="checkbox" placeholder="Enter your feedback" />
-            <input
-              type="email"
-              placeholder="Enter your email-id here"
-              id="#email"
-            />
-            <button class="btn">Subscribe</button>
-          </form>
-        </div>
-      </section> -->
     </main>
-    <footer>
+    <footer id="contact">
       <div class="footer__policy">
         <div class="magistic__social">
           <img src="./assets/logo.png" alt="Magistic Logo" />
@@ -169,7 +153,10 @@
           </p>
         </div>
       </div>
-      <h5>&copy;Copyright Magistic Cake 'n' Art. All Rights Reserved</h5>
+      <div class="order">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <h6>&copy;Copyright Magistic Cake 'n' Art. All Rights Reserved</h6>
     </footer>
   </body>
 </html>

@@ -6,6 +6,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  transition: 1s ease-in-out;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -32,8 +36,18 @@ header img {
   max-width: 120px;
 }
 
-nav ul {
+ul {
   list-style: none;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #707b7c;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 nav ul li {
@@ -54,7 +68,8 @@ nav ul li a:hover {
 
 .btn {
   padding: 0.6rem 1.4rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   background-color: #fc6603;
   border: none;
   border-radius: 30px;
@@ -88,7 +103,7 @@ main {
 
 .home__cont {
   display: flex;
-  margin: 2rem 0;
+  margin: 3rem 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -111,12 +126,6 @@ main {
   margin: 1rem 0;
 }
 
-p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #707b7c;
-}
-
 .btngroup {
   margin: 1.5rem 0;
 }
@@ -126,7 +135,137 @@ p {
   max-width: 600px;
 }
 
+.about__cont {
+  padding: 1rem 0 2rem;
+}
+
+.about__cont .about__store {
+  width: 50%;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.about__store h2 {
+  margin: 1rem 0;
+}
+
+.about__store .products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products .prod__card {
+  width: 100%;
+  max-width: 200px;
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.prod__card:hover {
+  box-shadow: 0 3px 10px rgba(255, 0, 198, 0.5);
+}
+
+.prod__card span {
+  font-size: 2rem;
+  color: #fc6603;
+}
+
+.prod__card h4 {
+  margin-top: 0.5rem;
+}
+
+.about__bakery {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__bakery img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.about__bakery .about__magistic {
+  width: 40%;
+}
+
+.about__magistic h2 {
+  margin-bottom: 1rem;
+}
+
+.about__magistic p {
+  margin-bottom: 0.8rem;
+}
+
 footer {
   width: 80%;
   margin: auto;
+}
+
+.footer__policy {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #bdc3c7;
+}
+
+.magistic__social {
+  width: 24%;
+}
+
+.magistic__social img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.magistic__social p {
+  margin: 1rem 0;
+}
+
+.social__media {
+  font-size: 1.5rem;
+  color: #fc6603;
+}
+
+.foot__menu {
+  width: 15%;
+  text-align: center;
+}
+
+.foot__menu ul li a,
+.services ul li a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 2.5;
+  color: #707b7c;
+}
+
+.services {
+  width: 15%;
+  text-align: center;
+}
+
+.contact {
+  width: 24%;
+}
+
+.contact p {
+  margin-bottom: 1rem;
+}
+
+.contact p span {
+  font-size: 1rem;
+  color: #fc6603;
+  margin-right: 0.5rem;
+}
+
+footer h5 {
+  text-align: center;
+  margin-bottom: 2rem;
 }

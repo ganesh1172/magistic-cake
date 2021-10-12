@@ -79,8 +79,8 @@ label #close {
 }
 
 .btn {
-  padding: 0.6rem 1.4rem;
-  font-size: 0.9rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.8rem;
   font-weight: 600;
   background-color: #fc6603;
   border: none;
@@ -214,6 +214,61 @@ main {
   margin-bottom: 0.8rem;
 }
 
+.menu__cont {
+  margin: 0 0 4rem;
+}
+
+.menu__cont .menu__desc {
+  margin: 1rem 0;
+  width: 50%;
+}
+
+.card__cont {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  padding: 1.5rem 0;
+}
+
+.menu__card {
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  cursor: pointer;
+}
+
+.menu__card:hover {
+  box-shadow: 0 3px 10px rgba(0, 212, 255, 0.5);
+}
+
+.menu__card img {
+  max-width: 300px;
+  max-height: 150px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.menu__card .card__desc {
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px; /* fallback */
+  max-height: 32px; /* fallback */
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.menu__card .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 footer {
   width: 80%;
   margin: auto;
@@ -223,7 +278,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   border-bottom: 2px solid #bdc3c7;
 }
 
@@ -334,6 +389,10 @@ footer h6 {
     width: 70%;
   }
 
+  .card__cont {
+    grid-template-columns: auto auto auto;
+  }
+
   .magistic__social {
     width: 22%;
   }
@@ -420,6 +479,11 @@ footer h6 {
 
   .about__bakery .about__magistic {
     width: 100%;
+  }
+
+  .card__cont {
+    grid-template-columns: auto;
+    justify-content: center;
   }
 
   .footer__policy {

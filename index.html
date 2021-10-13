@@ -15,18 +15,14 @@
     <title>Magistic Cake 'n' Art</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <img src="./assets/logo.png" alt="Magistic Cake 'n' Art Logo" />
       <nav>
-        <input type="checkbox" id="check" />
-        <label for="check">
-          <i class="fas fa-bars" id="open"></i>
-          <i class="fas fa-times" id="close"></i>
-        </label>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Order</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><button class="btn">Place order</button></li>
         </ul>
@@ -118,6 +114,45 @@
           <div class="card__cont" id="menuItems"></div>
         </div>
       </section>
+      <section id="order">
+        <div class="order__cont">
+          <h3>Order</h3>
+          <h3>Your Cake</h3>
+          <form action="#">
+            <div class="col">
+              <div class="form__group">
+                <label for="">Name</label>
+                <input type="text" placeholder="John Doe" />
+              </div>
+              <div class="form__group">
+                <label for="">Email</label>
+                <input type="email" placeholder="JohnDoe@gmail.com" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form__group">
+                <label for="">Address</label>
+                <input type="text" placeholder="Enter address" />
+              </div>
+              <div class="form__group">
+                <label for="">Phone</label>
+                <input type="email" placeholder="+91-" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form__group">
+                <label for="">Date</label>
+                <input type="text" placeholder="Enter Date" />
+              </div>
+              <div class="form__group">
+                <label for="">Time</label>
+                <input type="email" placeholder="Time" />
+              </div>
+            </div>
+            <button class="btn form__btn">Place Order</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer id="contact">
       <div class="footer__policy">
@@ -164,7 +199,7 @@
           </p>
         </div>
       </div>
-      <div class="order">
+      <div class="whatsapp">
         <i class="fab fa-whatsapp"></i>
       </div>
       <h6>&copy;Copyright Magistic Cake 'n' Art. All Rights Reserved</h6>

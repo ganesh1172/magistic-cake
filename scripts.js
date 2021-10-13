@@ -1,3 +1,4 @@
+/* Fetch static data */
 fetch("./data/data.json")
   .then(function (response) {
     return response.json();
@@ -30,4 +31,17 @@ function appendData(data) {
   const cakeCards = document.querySelector(".card__cont");
   cakeCards.innerHTML = htmlCode;
 }
-// window.onload = appendData;
+
+//* window onScroll navbar shrink */
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const header = document.getElementById("header");
+  if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+    header.classList.add("header__shrink");
+  } else {
+    header.classList.remove("header__shrink");
+  }
+}

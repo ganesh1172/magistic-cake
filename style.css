@@ -1,20 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  padding: 1rem 0;
-  margin: 0 auto;
-  border-bottom: 2px solid #bdc3c7;
 }
 
 body {
@@ -27,10 +18,29 @@ body {
   );
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+  border-bottom: 2px solid #bdc3c7;
+  position: sticky;
+  top: 0;
+}
+
+.header__shrink {
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 0;
+  border: none;
+}
+
 header img {
   width: 100%;
   height: auto;
-  max-width: 120px;
+  max-width: 130px;
 }
 
 ul {
@@ -49,7 +59,7 @@ h2 {
 
 nav ul li {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -61,21 +71,6 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #fc6603;
-}
-
-label #open,
-label #close {
-  color: #fc6603;
-  font-size: 2rem;
-  float: right;
-  margin-left: 1rem;
-  line-height: 2;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
 }
 
 .btn {
@@ -215,7 +210,7 @@ main {
 }
 
 .menu__cont {
-  margin: 0 0 4rem;
+  margin: 0 0 5rem;
 }
 
 .menu__cont .menu__desc {
@@ -269,6 +264,57 @@ main {
   align-items: center;
 }
 
+.order__cont {
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: relative;
+  margin: 0 auto;
+  background-color: rgba(0, 212, 255, 0.2);
+}
+
+.order__cont h3 {
+  text-align: center;
+}
+
+.order__cont h3:nth-child(1) {
+  font-family: "Ephesis", cursive;
+  color: #fc6603;
+  font-size: 5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.order__cont .col {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.form__group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form__group input {
+  width: 300px;
+  padding: 0.8rem 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: 2px solid rgba(255, 0, 198, 0.5);
+}
+
+.form__group .form__btn {
+  width: 30%;
+  margin: 0 auto;
+}
+
 footer {
   width: 80%;
   margin: auto;
@@ -278,7 +324,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding-bottom: 2rem;
-  margin: 2rem 0;
+  margin: 4rem 0 2rem;
   border-bottom: 2px solid #bdc3c7;
 }
 
@@ -291,7 +337,7 @@ footer {
 }
 
 .magistic__social img {
-  max-width: 150px;
+  max-width: 130px;
   width: 100%;
 }
 
@@ -336,7 +382,7 @@ footer {
   margin-right: 0.5rem;
 }
 
-.order {
+.whatsapp {
   width: 4rem;
   height: 4rem;
   position: fixed;
@@ -350,12 +396,12 @@ footer {
   z-index: 100;
 }
 
-.order:hover {
+.whatsapp:hover {
   cursor: pointer;
   box-shadow: 1px 2px 10px #25d366;
 }
 
-.order i {
+.whatsapp i {
   font-size: 3rem;
   margin-top: 0.5rem;
 }
@@ -397,6 +443,10 @@ footer h6 {
     width: 22%;
   }
 
+  .order__cont {
+    width: 100%;
+  }
+
   .foot__menu,
   .services {
     width: 20%;
@@ -416,39 +466,6 @@ footer h6 {
 
   header {
     padding: 0.5rem 0;
-  }
-
-  label #open {
-    display: block;
-  }
-
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: #34495e;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 2rem 0;
-    line-height: 2;
-  }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
-
-  #check:checked ~ label #open {
-    display: none;
-  }
-
-  #check:checked ~ label #close {
-    display: block;
   }
 
   .home__cont {
@@ -481,9 +498,18 @@ footer h6 {
     width: 100%;
   }
 
+  .menu__cont .menu__desc {
+    width: 100%;
+  }
+
   .card__cont {
     grid-template-columns: auto;
     justify-content: center;
+  }
+
+  .order__cont .col {
+    grid-template-columns: auto;
+    justify-content: left;
   }
 
   .footer__policy {

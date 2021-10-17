@@ -12,15 +12,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("user_1Xh6Q8meGWGVqCW3eL8lp");
-      })();
-    </script>
     <title>Magistic Cake 'n' Art</title>
   </head>
   <body>
@@ -134,12 +125,12 @@
                 <input
                   type="text"
                   placeholder="Enter your fullname"
-                  id="fromName"
+                  class="username"
                 />
               </div>
               <div class="form__group">
-                <label for="email">Default</label>
-                <input type="text" placeholder="enter id" id="toName" />
+                <label for="text">Default</label>
+                <input type="text" placeholder="enter id" class="owner" />
               </div>
             </div>
             <div class="col">
@@ -148,7 +139,7 @@
                 <input
                   type="text"
                   placeholder="Enter your current address"
-                  id="msg"
+                  class="address"
                 />
               </div>
               <div class="form__group">
@@ -157,7 +148,7 @@
                   type="text"
                   placeholder="Enter your mobile number"
                   name="number"
-                  id="number"
+                  class="number"
                 />
               </div>
             </div>
@@ -168,7 +159,7 @@
                   type="date"
                   placeholder="Enter order date"
                   name="date"
-                  id="date"
+                  class="date"
                 />
               </div>
               <div class="form__group">
@@ -177,14 +168,14 @@
                   type="text"
                   placeholder="Enter order time"
                   name="time"
-                  id="time"
+                  class="time"
                 />
               </div>
             </div>
             <div class="col">
               <div class="form__group">
                 <label for="cake">Cake</label>
-                <select name="type" id="type">
+                <select name="type" class="type">
                   <option value="">cake type</option>
                   <option value="Black Forest">Black Forest</option>
                   <option value="Yellow Butter Cake">Yellow Butter Cake</option>
@@ -198,7 +189,7 @@
               </div>
               <div class="form__group">
                 <label for="kg">Kg</label>
-                <select name="quantity" id="quantity">
+                <select name="quantity" class="quantity">
                   <option value="">in kg</option>
                   <option value="0.5">0.5</option>
                   <option value="1">1</option>
@@ -208,7 +199,7 @@
                 </select>
               </div>
             </div>
-            <button class="btn form__btn" type="submit" onclick="postData()">
+            <button class="btn form__btn submit" type="submit">
               Place Order
             </button>
           </form>
@@ -268,5 +259,86 @@
       <h6>&copy;Copyright Magistic Cake 'n' Art. All Rights Reserved</h6>
     </footer>
     <script src="scripts.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_1Xh6Q8meGWGVqCW3eL8lp");
+      })();
+    </script>
+    <script type="text/javascript">
+      function validate() {
+        let name = document.querySelector(".username");
+        let owner = document.querySelector(".owner");
+        let address = document.querySelector(".address");
+        let number = document.querySelector(".number");
+        let date = document.querySelector(".date");
+        let time = document.querySelector(".time");
+        let type = document.querySelector(".type");
+        let quantity = document.querySelector(".quantity");
+        let btn = document.querySelector(".submit");
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (
+            name.value == "" ||
+            owner.value == "" ||
+            address.value == "" ||
+            number.value == "" ||
+            date.value == "" ||
+            time.value == "" ||
+            type.value == "" ||
+            quantity.value == ""
+          ) {
+            emptyerror();
+          } else {
+            sendmail(
+              name.value,
+              owner.value,
+              address.value,
+              number.value,
+              date.value,
+              time.value,
+              type.value,
+              quantity.value
+            );
+            success();
+          }
+        });
+      }
+      validate();
+
+      function sendmail(
+        name,
+        owner,
+        address,
+        number,
+        date,
+        time,
+        type,
+        quantity
+      ) {
+        emailjs.send("service_p8wa85m", "template_1waatht", {
+          from_name: name,
+          to_name: owner,
+          address: address,
+          number: number,
+          date: date,
+          time: time,
+          type: type,
+          quantity: quantity,
+        });
+      }
+
+      function emptyerror() {
+        alert("Error occur");
+      }
+
+      function success() {
+        alert("successful");
+      }
+    </script>
   </body>
 </html>

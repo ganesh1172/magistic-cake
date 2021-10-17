@@ -12,6 +12,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_1Xh6Q8meGWGVqCW3eL8lp");
+      })();
+    </script>
     <title>Magistic Cake 'n' Art</title>
   </head>
   <body>
@@ -118,38 +127,90 @@
         <div class="order__cont">
           <h3>Order</h3>
           <h3>Your Cake</h3>
-          <form action="#">
+          <form>
             <div class="col">
               <div class="form__group">
-                <label for="">Name</label>
-                <input type="text" placeholder="John Doe" />
+                <label for="fullname">Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your fullname"
+                  id="fromName"
+                />
               </div>
               <div class="form__group">
-                <label for="">Email</label>
-                <input type="email" placeholder="JohnDoe@gmail.com" />
+                <label for="email">Default</label>
+                <input type="text" placeholder="enter id" id="toName" />
               </div>
             </div>
             <div class="col">
               <div class="form__group">
-                <label for="">Address</label>
-                <input type="text" placeholder="Enter address" />
+                <label for="current address">Address</label>
+                <input
+                  type="text"
+                  placeholder="Enter your current address"
+                  id="msg"
+                />
               </div>
               <div class="form__group">
-                <label for="">Phone</label>
-                <input type="email" placeholder="+91-" />
+                <label for="mobile number">Phone</label>
+                <input
+                  type="text"
+                  placeholder="Enter your mobile number"
+                  name="number"
+                  id="number"
+                />
               </div>
             </div>
             <div class="col">
               <div class="form__group">
-                <label for="">Date</label>
-                <input type="text" placeholder="Enter Date" />
+                <label for="date">Date</label>
+                <input
+                  type="date"
+                  placeholder="Enter order date"
+                  name="date"
+                  id="date"
+                />
               </div>
               <div class="form__group">
-                <label for="">Time</label>
-                <input type="email" placeholder="Time" />
+                <label for="time">Time</label>
+                <input
+                  type="text"
+                  placeholder="Enter order time"
+                  name="time"
+                  id="time"
+                />
               </div>
             </div>
-            <button class="btn form__btn">Place Order</button>
+            <div class="col">
+              <div class="form__group">
+                <label for="cake">Cake</label>
+                <select name="type" id="type">
+                  <option value="">cake type</option>
+                  <option value="Black Forest">Black Forest</option>
+                  <option value="Yellow Butter Cake">Yellow Butter Cake</option>
+                  <option value="Pound Cake">Pound Cake</option>
+                  <option value="Red Velvet Cake">Red Velvet Cake</option>
+                  <option value="Carrot Cake">Carrot Cake</option>
+                  <option value="Sponge Cake">Sponge Cake</option>
+                  <option value="Genoise Cake">Genoise Cake</option>
+                  <option value="Chiffon Cake">Chiffon Cake</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label for="kg">Kg</label>
+                <select name="quantity" id="quantity">
+                  <option value="">in kg</option>
+                  <option value="0.5">0.5</option>
+                  <option value="1">1</option>
+                  <option value="1.5">1.5</option>
+                  <option value="2">2</option>
+                  <option value="custome">Custom</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn form__btn" type="submit" onclick="postData()">
+              Place Order
+            </button>
           </form>
         </div>
       </section>
@@ -200,7 +261,9 @@
         </div>
       </div>
       <div class="whatsapp">
-        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/919167697803" target="_blank"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
       </div>
       <h6>&copy;Copyright Magistic Cake 'n' Art. All Rights Reserved</h6>
     </footer>

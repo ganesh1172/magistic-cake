@@ -311,9 +311,15 @@ main {
   outline: 2px solid rgba(255, 0, 198, 0.5);
 }
 
-.form__group .form__btn {
-  width: 30%;
+.form__btn {
+  display: block;
+  text-align: center;
   margin: 0 auto;
+}
+
+.form__btn .submit {
+  margin: 0.5rem 0;
+  padding: 0.9rem 3rem;
 }
 
 footer {
@@ -391,7 +397,6 @@ footer {
   right: 3rem;
   text-align: center;
   background-color: #25d366;
-  color: #fff;
   border-radius: 50%;
   box-shadow: 2px 2px 3px #999;
   z-index: 100;
@@ -403,6 +408,7 @@ footer {
 }
 
 .whatsapp i {
+  color: #fff;
   font-size: 3rem;
   margin-top: 0.5rem;
 }
@@ -511,6 +517,10 @@ footer h6 {
   .order__cont .col {
     grid-template-columns: auto;
     justify-content: left;
+  }
+
+  .form__btn {
+    text-align: left;
   }
 
   .footer__policy {

@@ -1,22 +1,3 @@
-// function postData(params) {
-//   let tempParams = {
-//     from_name: document.getElementById("fromName").value,
-//     to_name: document.getElementById("toName").value,
-//     message: document.getElementById("msg").value,
-//     number: document.getElementById("number").value,
-//     date: document.getElementById("date").value,
-//     time: document.getElementById("time").value,
-//     type: document.getElementById("type").value,
-//     quantity: document.getElementById("quantity").value,
-//   };
-
-//   emailjs
-//     .send("service_h0mrvea", "template_5lbsoz4", tempParams)
-//     .then(function (res) {
-//       console.log("success", res.status);
-//     });
-// }
-
 /* Fetch static data */
 fetch("./data/data.json")
   .then(function (response) {
@@ -41,7 +22,7 @@ function appendData(data) {
       <p class="card__desc">${cake.previewDescription}</p>
       <div class="price">
       <p>${"₹" + cake.price[0] + "/-"}</p>
-      <button class="btn">Place Order</button>
+      <button class="btn">View Details</button>
       </div>
       </div>`;
   });
